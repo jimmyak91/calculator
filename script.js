@@ -1,5 +1,15 @@
 
 
+
+
+
+
+
+
+
+//----------------------------------------
+//  Calculator Operation Function Logic
+//----------------------------------------
 function operate(operator, x, y) {
 
     if (operator == 'sum') {
