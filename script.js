@@ -24,7 +24,28 @@ equalsButton.addEventListener('click', result);
 clearButton.addEventListener('click', clear);
 backspaceButton.addEventListener('click', backspace);
 
-
+window.addEventListener('keydown', function (e) {
+    
+    const key = document.querySelector(`button[data-key="${e.keyCode}"]`);
+    if (!key) return;
+    if (key.className === 'digit') {
+        appendDigit(key.innerHTML);
+    }
+    else if (key.className === 'operator'){
+        setOperator(key.id);
+    }
+    else if (key.id === 'equals') {
+        result();
+    }
+    else if (key.id === 'backspace') {
+        backspace();
+    }
+    else {
+        return;
+    }
+       
+    
+})
 
 
 
