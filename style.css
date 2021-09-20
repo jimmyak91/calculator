@@ -6,10 +6,18 @@
 }
 
 .screen {
+    display: flex;
+    flex-direction: column;
     border: 2px solid black;
     border-radius: 5px;
     width: 400px;
     height: 100px;
+}
+
+#display-operation, #display-result {
+
+    border: 2px solid black;
+    padding: 20px;
 }
 
 .inputs {
