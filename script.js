@@ -28,6 +28,8 @@ window.addEventListener('keydown', function (e) {
     
     const key = document.querySelector(`button[data-key="${e.keyCode}"]`);
     if (!key) return;
+    key.setAttribute('style', 'transform: translateY(4px) translateX(4px)');
+    key.setAttribute('style', 'box-shadow: 0px 0px 0px black');
     if (key.className === 'digit') {
         appendDigit(key.innerHTML);
     }
@@ -44,9 +46,12 @@ window.addEventListener('keydown', function (e) {
         return;
     }
        
-    
-})
-
+    // reset the color after a short delay
+    setTimeout(function() {
+        key.setAttribute('style', 'box-shadow: 4px 2px 2px black');
+        key.setAttribute('style', 'transform: translateY(-4px) translateX(-4px)');
+      }, 150);
+    }, false);
 
 
 function setOperator(value) {

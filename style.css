@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
 .main {
     display: flex;
     flex-direction: column;
@@ -10,28 +12,87 @@
     flex-direction: column;
     border: 2px solid black;
     border-radius: 5px;
-    width: 400px;
+    width: 420px;
     height: 100px;
-}
-
-#display-operation, #display-result {
-
-    border: 2px solid black;
-    padding: 20px;
 }
 
 .inputs {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
+    width: 440px;
+
+}
+
+
+body {
+    background-color:  white;
+    color: black;
+    font-size: 50px;
+    font-family: 'Inconsolata', monospace;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -webkit-touch-callout: none; /* Disable Android and iOS callouts*/ 
 }
 
 button {
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    margin: 15px;
+    padding: 20px;
+    font-size: 35px;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    box-shadow: 4px 4px 2px #00303f;
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    background-color: #056571;
+}
+
+button:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: 0px 0px 0px black;
 }
 
 .operator {
-    background-color: cornflowerblue;
-    color: red;
+    background-color: #af473c;
+    box-shadow: 4px 4px 2px #6f2232;
+    color: #d1e8e2;
+}
+
+.operator:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: 0px 0px 0px black;
+}
+
+#btnEnter {
+    width: 190px;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#btnGithub {
+    background-color: orange;
+    box-shadow: 4px 4px 2px #af473c;
+    color: black;
+}
+
+#input {
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    padding: 20px 50px;
+    font-size: 80px;
+    font-family: 'Squada One';
+    background-color: black;
+    color: transparent;
+    text-shadow: 0px 0px 0px white;
+    border: none;
+    outline: none;
+    
 }
