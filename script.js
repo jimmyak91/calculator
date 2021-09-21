@@ -25,7 +25,7 @@ clearButton.addEventListener('click', clear);
 backspaceButton.addEventListener('click', backspace);
 
 window.addEventListener('keydown', function (e) {
-    
+    console.log(e.keyCode);
     const key = document.querySelector(`button[data-key="${e.keyCode}"]`);
     if (!key) return;
     key.setAttribute('style', 'transform: translateY(4px) translateX(4px)');
@@ -41,6 +41,9 @@ window.addEventListener('keydown', function (e) {
     }
     else if (key.id === 'backspace') {
         backspace();
+    }
+    else if (key.id === 'clear') {
+        clear();
     }
     else {
         return;

@@ -1,39 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.screen {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
-    border-radius: 5px;
-    width: 420px;
-    height: 100px;
-}
-
-.inputs {
-    display: flex;
-    flex-wrap: wrap;
-    width: 440px;
-
-}
-
-
 body {
-    background-color:  white;
-    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color:  #21262d;
+    color: #c9d1d9;
     font-size: 50px;
+    margin: 0px;
     font-family: 'Inconsolata', monospace;
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer */
     -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
     -webkit-user-select: none; /* Chrome, Safari, and Opera */
     -webkit-touch-callout: none; /* Disable Android and iOS callouts*/ 
+}
+
+.main {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    background-color: #aaaaaa;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #666666;
+    border-radius: 25px;
+    box-shadow:
+    1px 1px #666666,
+    3px 3px #666666,
+    6px 6px #666666,
+    9px 9px #666666,
+    12px 12px #666666,
+    15px 15px #666666,
+    18px 18px #666666,
+    21px 21px #666666,
+    24px 24px #666666,
+    30px 30px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    border-radius: 15px;
+    width: 400px;
+    height: 100px;
+    background-color: #c9d1d9;
+    margin: 50px;
+    padding: 20px;
+    align-items: flex-end;
+    /* box-shadow: 2px 2px 1px #c7c7c7; */
+}
+
+#display-operation {
+    height: 40px;
+    margin-left: 50px;
+    font-size: 20px;
+    color: #21262d;
+}
+
+#display-result {
+    height: 60px;
+    font-size: 55px;
+    color: #21262d;
+    font-weight: 700;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 440px;
+    margin-bottom: 60px;
+}
+
+
+
+.footer {
+    display: flex;
+    margin-top: auto;
+    min-height: 80px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.footer img {
+    margin-left: 10px;
 }
 
 button {
@@ -44,10 +107,10 @@ button {
     border: none;
     border-radius: 40px;
     outline: none;
-    box-shadow: 4px 4px 2px #00303f;
+    box-shadow: 4px 4px 2px #c7c7c7;
     font-family: 'Inconsolata', monospace;
-    color: white;
-    background-color: #056571;
+    color: #21262d;
+    background-color: #f3f3f3;
 }
 
 button:active {
@@ -66,33 +129,22 @@ button:active {
     box-shadow: 0px 0px 0px black;
 }
 
-#btnEnter {
-    width: 190px;
-}
 
 #buttons {
     text-align: center;
 }
 
-#btnGithub {
+.delete-functions button {
     background-color: orange;
-    box-shadow: 4px 4px 2px #af473c;
-    color: black;
+    box-shadow: 4px 4px 2px #aa6f00;
+    color: #f3f3f3;
+    width: 140px;
+    margin: 15px;
+    padding: 20px;
 }
 
-#input {
-    text-align: center;
-}
-
-input {
-    text-align: center;
-    padding: 20px 50px;
-    font-size: 80px;
-    font-family: 'Squada One';
-    background-color: black;
-    color: transparent;
-    text-shadow: 0px 0px 0px white;
-    border: none;
-    outline: none;
+.delete-functions button:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: 0px 0px 0px #af473c;
     
 }
